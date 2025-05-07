@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map and Weather App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div id="searchBar">
+    <div id="searchContainer">
+      <input type="text" id="searchInput" placeholder="Search for a city or area..." autocomplete="off" />
+      <button id="clearBtn">&times;</button>
+    </div>
+    <div id="suggestions"></div>
+    <div id="recentSearches"></div>
+  </div>
+  <div id="map"></div>
+  <div id="weatherBox">
+    <h1 class="location">Location</h1>
+    <p class="temp">Temperature: -- °C</p>
+    <p class="humidity">Humidity: --%</p>
+    <p class="min">Min Temp: -- °C</p>
+    <p class="max">Max Temp: -- °C</p>
+    <p class="wind">Wind Speed: -- m/s</p>
+  </div>
+  <div id="detailsBox"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="./script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,134 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease, zoom 0.5s ease;
+}
+#searchBar {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+}
+#searchContainer {
+  position: relative;
+}
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#clearBtn {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+#suggestions {
+  margin-top: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.suggestion {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.suggestion:hover {
+  background: #f0f0f0;
+}
+#recentSearches {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.recent-item {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 8px;
+  background: #eee;
+  border-radius: 4px;
+}
+.recent-item:hover {
+  background: #ddd;
+}
+/* Weather Box Styles */
+#weatherBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: left 0.5s ease, transform 0.5s ease;
+  z-index: 900;
+}
+#weatherBox.moved {
+  left: auto;
+  right: 20px;
+  transform: translate(0, -50%);
+}
+#weatherBox h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#weatherBox .temp {
+  font-size: 32px;
+  margin: 10px 0;
+}
+#weatherBox p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+#weatherBox h3 {
+  margin: 5px 0;
+  font-size: 14px;
+}
+/* Details Box Styles */
+#detailsBox {
+  position: absolute;
+  top: 50%;
+  left: -320px;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  padding: 20px;
+  width: 250px;
+  color: #333;
+  transition: left 0.5s ease;
+  z-index: 900;
+}
+#detailsBox.visible {
+  left: 20px;
+}
+#detailsBox h3 {
+  margin-top: 0;
+}
